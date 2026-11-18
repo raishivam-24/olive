@@ -27,7 +27,7 @@ function App() {
       <a className="brand-link" href="#home" aria-label="Olive Residency home" onClick={closeMenu}><Mark /></a>
       <button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><span></span><span></span></button>
       <nav className={menuOpen ? 'nav nav-open' : 'nav'} aria-label="Main navigation">
-        <a href="#story" onClick={closeMenu}>The vision</a><a href="#amenities" onClick={closeMenu}>Amenities</a><a href="#gallery" onClick={closeMenu}>Gallery</a><a href="#location" onClick={closeMenu}>Location</a><a href="#rera" onClick={closeMenu}>RERA details</a>
+        <a href="#story" onClick={closeMenu}>The vision</a><a href="#amenities" onClick={closeMenu}>Amenities</a><a href="#location" onClick={closeMenu}>Location</a><a href="#rera" onClick={closeMenu}>RERA details</a>
       </nav>
       <a className="nav-cta" href="tel:+919516510555">Enquire <Arrow /></a>
     </header>
@@ -76,16 +76,6 @@ function App() {
       </section>
 
       <section className="garden-feature"><img src={A + 'garden-walk.jpg'} alt="Garden walk and play area in the Olive Residency brochure"/><div className="garden-overlay"><span className="eyebrow">A slower pace, in good company</span><h2>Find your<br/><em>own rhythm.</em></h2><p>Walk, play, pause, gather. At Olive Residency, open spaces are part of the plan.</p><a href="#location" className="button button-light">Find us in Bilaspur <span>↓</span></a></div></section>
-
-      <section className="gallery-section section-pad" id="gallery">
-        <div className="section-heading"><div><span className="eyebrow">A closer look at Olive</span><h2>Scenes of <em>everyday life.</em></h2></div><p>Garden paths, family spaces and quiet corners, collected from the Olive Residency project brochure.</p></div>
-        <div className="gallery-grid">
-          <figure className="gallery-item"><img src={A + 'gallery-walkway.jpg'} alt="Landscaped walkway and garden seating"/><figcaption><span>01</span><strong>Garden walkway</strong></figcaption></figure>
-          <figure className="gallery-item"><img src={A + 'gallery-play-garden.jpg'} alt="Garden and clubhouse at Olive Residency"/><figcaption><span>02</span><strong>Club & garden</strong></figcaption></figure>
-          <figure className="gallery-item"><img src={A + 'gallery-kids-play.jpg'} alt="Children’s play area"/><figcaption><span>03</span><strong>Kids’ play area</strong></figcaption></figure>
-          <figure className="gallery-item"><img src={A + 'gallery-gazebo.jpg'} alt="Gazebo and landscaped community space"/><figcaption><span>04</span><strong>Gazebo & greens</strong></figcaption></figure>
-        </div>
-      </section>
 
       <section className="location section-pad" id="location">
         <div className="section-heading location-heading"><div><span className="eyebrow">Connected to what matters</span><h2>Chilhati, <em>Bilaspur.</em></h2></div><p>Located on Chilhati Main Road, opposite Vivekanand Residency. Distances below are reproduced from the project brochure.</p></div>
