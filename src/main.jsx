@@ -16,7 +16,7 @@ const distances = [
   ['Bilaspur Railway Station', '6.0 km'], ['NTPC Sipat', '10 km'],
 ];
 function Mark({ light = false }) {
-  return <span className={`brand ${light ? 'brand-light' : ''}`}><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="10"/><path d="M9 30c4.5 0 7 3.2 9.1 6.3M39 30c-4.5 0-7 3.2-9.1 6.3M17.2 36.3c2.5-2.4 4.8-3.4 6.8-3.4s4.3 1 6.8 3.4"/></svg><span>Olive<br/>Residency</span></span>;
+   return <span className={`brand ${light ? 'brand-light' : ''}`}><img src={A + 'olive-residency-mark.svg'} alt=""/><span>Olive<br/>Residency</span></span>;
 }
 function Arrow() { return <span aria-hidden="true">↗</span>; }
 function App() {
