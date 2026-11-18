@@ -309,3 +309,16 @@ img{max-width:100%}
  .area-row i{grid-column:2;grid-row:2;font-size:10px}
  .rera-badge,.certificate-preview{flex-shrink:0}
 }
+/* Give the phone hero a consistent inset instead of edge-to-edge copy. */
+@media(max-width:650px){
+  .hero .hero-main{width:100%;min-width:0}
+ .hero .hero-content{position:relative;inset:initial;transform:none;width:auto;max-width:none;min-width:0;margin:0 22px;padding:34px 0 23px!important;box-sizing:border-box}
+ .hero .hero-eyebrow{margin:0 0 10px;max-width:100%;line-height:1.5}
+ .hero h1{max-width:100%;margin:12px 0 14px;font-size:clamp(38px,10.4vw,48px);line-height:1.08;overflow-wrap:normal}
+ .hero .hero-content>p{max-width:38ch;margin:0;line-height:1.65}
+ .hero .hero-actions{width:100%;margin-top:22px;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .hero .hero-actions .button{min-width:0;width:100%;padding:0 8px;white-space:nowrap}
+ .hero .hero-visual{width:100%;padding:3px clamp(18px,5vw,28px) 20px;box-sizing:border-box}
+ .hero .hero-image{display:block;width:100%;max-width:100%;height:auto}
+}
+
