@@ -237,3 +237,75 @@ body{font-size:16px}
 .gallery-caption-note{font-size:12px;color:#7a756c;margin:5px 0 0}
 @media(max-width:900px){.amenity-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 16px}.project-gallery{padding-top:80px;padding-bottom:80px}.project-gallery-grid{columns:2;column-gap:18px}.project-gallery-card{margin-bottom:18px}}
 @media(max-width:650px){.amenity-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.project-gallery{padding-top:66px;padding-bottom:66px}.project-gallery .section-heading{margin-bottom:24px}.project-gallery-grid{columns:1}.project-gallery-card{margin-bottom:16px}.project-gallery-card figcaption strong{font-size:16px}.gallery-caption-note{font-size:11px}}
+/* Mobile hero refinements: clearer hierarchy, tappable actions, legible project facts. */
+:focus-visible{outline:3px solid #b78d55;outline-offset:3px}
+.hero-detail a{text-decoration-thickness:1px;text-underline-offset:3px}
+@media(max-width:650px){
+ .hero-content{padding:32px 7% 20px}
+ .hero-eyebrow{font-size:10px;letter-spacing:.14em;gap:9px;margin-bottom:8px}
+ .hero h1{font-size:clamp(38px,10.4vw,48px);line-height:1.05;margin:14px 0 13px}
+ .hero-content>p{max-width:36ch;font-size:15px;line-height:1.65}
+ .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:21px}
+ .hero-actions .button{width:100%;min-height:48px;padding:0 8px;font-size:9px;letter-spacing:.08em;gap:7px;white-space:nowrap}
+ .hero-visual{padding:2px 5% 18px;background:#e4ded2}
+ .hero-image{border-radius:2px;box-shadow:0 8px 24px rgba(48,40,28,.12)}
+ .hero-foot{grid-template-columns:1fr;gap:0;padding:7px 7% 10px;border-top:3px solid #b78d55}
+ .hero-detail,.hero-detail:first-child{grid-column:auto;display:grid;grid-template-columns:minmax(104px,.72fr) minmax(0,1.28fr);align-items:start;gap:10px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+ .hero-detail:last-child{border-bottom:0}
+ .hero-detail small{font-size:9px;line-height:1.5;letter-spacing:.12em}
+ .hero-detail span,.hero-detail>a{font-size:13px;line-height:1.55;letter-spacing:.02em;overflow-wrap:anywhere}
+ .hero-detail span a{font-weight:600}
+ .rera-certificate-promo{padding-top:34px;padding-bottom:38px}
+ .certificate-copy h2{font-size:clamp(39px,11vw,46px)}
+ .certificate-number strong{font-size:18px;letter-spacing:.04em}
+ .certificate-download{min-height:50px;font-size:11px}
+}
+/* Replace masonry with a stable responsive grid: one complete image per card. */
+.project-gallery-grid{display:grid;columns:initial;column-count:initial;column-width:initial;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:24px}
+.project-gallery-card{display:block;width:100%;margin:0;break-inside:auto;overflow:hidden;border:1px solid #e6e0d5;border-radius:4px;background:#fbfaf6;box-shadow:0 8px 22px rgba(46,38,26,.06)}
+.project-gallery-card img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#e6e1d6}
+.project-gallery-card figcaption{min-height:58px;padding:14px 16px;gap:12px}
+.project-gallery-card figcaption span{font-size:11px}
+.project-gallery-card figcaption strong{font-size:18px}
+@media(max-width:900px){.project-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.project-gallery-card{margin:0}}
+@media(max-width:650px){.project-gallery-grid{grid-template-columns:minmax(0,1fr);gap:18px}.project-gallery-card{width:100%;margin:0}.project-gallery-card img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}.project-gallery-card figcaption{min-height:56px;padding:13px 15px}.project-gallery-card figcaption strong{font-size:17px}}
+/* Small-screen layout repair: stack RERA content and prevent narrow-column wrapping. */
+img{max-width:100%}
+@media(max-width:820px){
+ .rera-top{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:start}
+ .rera-copy{width:100%;max-width:none;min-width:0}
+ .rera-badge{justify-self:center;margin:0}
+ .rera-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
+ .rera-card{min-width:0}
+ .rera-card strong,.rera-card small{overflow-wrap:anywhere}
+ .area-row{min-width:0}
+}
+@media(max-width:650px){
+ .rera-top{display:block;padding-top:42px;padding-bottom:38px}
+ .rera-copy{max-width:100%;width:100%}
+ .rera-copy h2{font-size:clamp(43px,12vw,54px);line-height:1.02;margin:15px 0}
+ .rera-copy>p{max-width:100%;font-size:14px;line-height:1.75}
+ .rera-copy .button{min-height:48px;font-size:11px}
+ .rera-badge{width:118px;height:118px;margin:27px auto 0}
+ .rera-details{padding-top:35px;padding-bottom:32px}
+ .rera-heading{align-items:flex-start;gap:9px;flex-wrap:wrap;padding-bottom:14px}
+ .rera-heading .eyebrow{font-size:10px}
+ .rera-heading>span:last-child{font-size:9px}
+ .rera-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;padding:8px 0 20px}
+ .rera-card{width:100%;min-height:0;padding:15px 0 14px;gap:7px}
+ .rera-card>span:first-child{font-size:10px;letter-spacing:.13em}
+ .rera-card strong{font-size:18px;line-height:1.35;overflow-wrap:anywhere}
+ .rera-id strong{font-size:21px;letter-spacing:.02em}
+ .rera-card small,.id-status{font-size:12px;line-height:1.5}
+ .documents>a{grid-template-columns:30px minmax(0,1fr) 62px;gap:9px;min-width:0}
+ .documents strong{font-size:14px;line-height:1.35}
+ .documents small{font-size:9px;line-height:1.4}
+ .documents b{font-size:9px}
+ .area-section{min-width:0}
+ .area-row{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;gap:4px 10px;min-height:0;padding:11px 0;font-size:12px}
+ .area-row span{grid-column:1;grid-row:1/3;min-width:0}
+ .area-row span small{font-size:10px;line-height:1.4}
+ .area-row b{grid-column:2;grid-row:1;font-size:11px;white-space:nowrap}
+ .area-row i{grid-column:2;grid-row:2;font-size:10px}
+ .rera-badge,.certificate-preview{flex-shrink:0}
+}
