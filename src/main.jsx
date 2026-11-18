@@ -27,7 +27,7 @@ function App() {
       <a className="brand-link" href="#home" aria-label="Olive Residency home" onClick={closeMenu}><Mark /></a>
       <button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><span></span><span></span></button>
       <nav className={menuOpen ? 'nav nav-open' : 'nav'} aria-label="Main navigation">
-        <a href="#story" onClick={closeMenu}>The vision</a><a href="#amenities" onClick={closeMenu}>Amenities</a><a href="#location" onClick={closeMenu}>Location</a><a href="#rera" onClick={closeMenu}>RERA details</a>
+        <a href="#story" onClick={closeMenu}>The vision</a><a href="#amenities" onClick={closeMenu}>Amenities</a><a href="#gallery" onClick={closeMenu}>Gallery</a><a href="#location" onClick={closeMenu}>Location</a><a href="#rera" onClick={closeMenu}>RERA details</a>
       </nav>
       <a className="nav-cta" href="tel:+919516510555">Enquire <Arrow /></a>
     </header>
@@ -75,18 +75,25 @@ function App() {
         </div>
       </section>
 
-      <section className="landscape-image"><img src={A + 'community-aerial.jpg'} alt="Aerial view of the planned Olive Residency layout"/><div className="image-caption"><span>01 — A community with everything in its place</span><span>Illustration from the project brochure</span></div></section>
-
       <section className="amenities section-pad" id="amenities">
         <div className="section-heading"><div><span className="eyebrow">Made for everyday living</span><h2>Space for the <em>moments</em><br/>that make a life.</h2></div><p>From an unhurried walk to a little celebration, the shared spaces are designed to bring neighbors and generations together.</p></div>
         <div className="amenity-layout">
-          <div className="amenity-photo"><img src={A + 'leisure-deck.jpg'} alt="Leisure deck and pool from the Olive Residency brochure"/><div className="photo-note">LEISURE DECK · OLIVE RESIDENCY</div></div>
           <div className="amenity-list">{features.map(([name, number]) => <div className="amenity-item" key={name}><span>{number}</span><strong>{name}</strong><b>+</b></div>)}</div>
         </div>
         <div className="amenity-bottom"><span>01 — 16</span><span>Amenities as described in the supplied brochure</span></div>
       </section>
 
-      <section className="garden-feature"><img src={A + 'garden-walk.jpg'} alt="Garden walk and play area in the Olive Residency brochure"/><div className="garden-overlay"><span className="eyebrow">A slower pace, in good company</span><h2>Find your<br/><em>own rhythm.</em></h2><p>Walk, play, pause, gather. At Olive Residency, open spaces are part of the plan.</p><a href="#location" className="button button-light">Find us in Bilaspur <span>↓</span></a></div></section>
+      <section className="project-gallery section-pad" id="gallery">
+        <div className="section-heading"><div><span className="eyebrow">A look around Olive</span><h2>Picture life <em>here.</em></h2></div><p>Explore the entrance, plotted community, gardens and shared spaces shown in the project brochure.</p></div>
+        <div className="project-gallery-grid">
+          <figure className="project-gallery-card"><img src={A + 'community-aerial.jpg'} alt="Aerial overview of Olive Residency community layout"/><figcaption><span>01</span><strong>The community</strong></figcaption></figure>
+          <figure className="project-gallery-card"><img src={A + 'hero-entrance.jpg'} alt="Olive Residency entrance gate"/><figcaption><span>02</span><strong>Grand entrance</strong></figcaption></figure>
+          <figure className="project-gallery-card"><img src={A + 'garden-walk.jpg'} alt="Landscaped garden walk, play area and seating"/><figcaption><span>03</span><strong>Garden & play</strong></figcaption></figure>
+          <figure className="project-gallery-card"><img src={A + 'leisure-deck.jpg'} alt="Pool and leisure deck"/><figcaption><span>04</span><strong>Leisure deck</strong></figcaption></figure>
+          <figure className="project-gallery-card"><img src={A + 'temple-garden.jpg'} alt="Temple set within landscaped gardens"/><figcaption><span>05</span><strong>Temple & garden</strong></figcaption></figure>
+        </div>
+        <p className="gallery-caption-note">Project imagery from the supplied brochure. Illustrative only.</p>
+      </section>
 
       <section className="location section-pad" id="location">
         <div className="section-heading location-heading"><div><span className="eyebrow">Connected to what matters</span><h2>Chilhati, <em>Bilaspur.</em></h2></div><p>Located on Chilhati Main Road, opposite Vivekanand Residency. Distances below are reproduced from the project brochure.</p></div>
@@ -94,7 +101,6 @@ function App() {
           <div className="map-card"><div className="map-top"><span className="eyebrow">THE NEIGHBOURHOOD</span><a href={A + 'olive-residency-brochure.pdf'} target="_blank" rel="noreferrer">View location map <Arrow /></a></div><div className="map-art"><img src={A + 'location-map.jpg'} alt="Location map from the Olive Residency brochure" /></div><div className="map-address"><span>SITE ADDRESS</span><p>Chilhati Main Road, opposite Vivekanand Residency,<br/>Chilhati, Bilaspur, Chhattisgarh</p></div></div>
           <div className="distance-list">{distances.map(([place, distance], i) => <div className="distance-row" key={place}><span className="distance-num">{String(i+1).padStart(2,'0')}</span><span>{place}</span><span className="distance-rule"></span><strong>{distance}</strong></div>)}</div>
         </div>
-        <div className="garden-strip"><img src={A + 'temple-garden.jpg'} alt="Temple and landscaped gardens shown in the project brochure"/><div><span className="eyebrow">Room for reflection</span><p>Temple, garden and gathering spaces are part of the planned community.</p></div><span className="strip-count">02 / 04</span></div>
       </section>
 
       <section className="rera-section" id="rera">
