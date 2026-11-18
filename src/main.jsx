@@ -50,6 +50,17 @@ function App() {
         </div>
       </section>
 
+      <section className="rera-certificate-promo section-pad" id="rera-certificate">
+        <div className="certificate-preview"><img src={A + 'rera-certificate-preview.png'} alt="Preview of the Chhattisgarh RERA registration certificate for Olive Residency" /></div>
+        <div className="certificate-copy">
+          <span className="eyebrow">Official project registration</span>
+          <h2>RERA certificate,<br/><em>in view.</em></h2>
+          <p>Review the registration certificate issued by the Chhattisgarh Real Estate Regulatory Authority.</p>
+          <div className="certificate-number"><small>PROJECT REGISTRATION NO.</small><strong>PCGRERA031126002182</strong><span>Registered 03 Nov 2026 · Valid through 09 Oct 2031</span></div>
+          <a className="button button-dark certificate-download" href={A + 'rera-registration-certificate.pdf'} download="Olive-Residency-RERA-Certificate.pdf">Download RERA certificate <Arrow /></a>
+        </div>
+      </section>
+
       <section className="intro section-pad" id="story">
         <div className="intro-label"><span className="eyebrow">A place of your own</span><span className="vertical-note">OLIVE RESIDENCY · EST. 2026</span></div>
         <div className="intro-main">
