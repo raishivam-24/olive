@@ -9,6 +9,12 @@
 .footer-info,.footer-bottom{color:#ded7c9}
 .office-address{display:flex;flex-direction:column;gap:6px;color:#f0eadd}
 .office-address strong{color:#d7b47f;font-size:.9em;letter-spacing:.14em}
+/* Let gallery cards flow as a balanced masonry layout without cropping photos. */
+.project-gallery-grid{display:block;columns:3;column-gap:24px}
+.project-gallery-card{display:inline-block;width:100%;margin:0 0 24px;break-inside:avoid;vertical-align:top}
+@media(max-width:900px){.project-gallery-grid{columns:2;column-gap:20px}.project-gallery-card{margin-bottom:20px}}
+@media(max-width:650px){.project-gallery-grid{columns:1;column-gap:0}.project-gallery-card{margin-bottom:18px}}
+
 .map-art{background:#f4f2ec}.map-art img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
 
 
