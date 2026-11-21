@@ -68,7 +68,6 @@ function App() {
           <div className="intro-copy"><p className="lead">At Olive Residency, the everyday has room to become something more.</p><p>Set along Chilhati Main Road in Bilaspur, this plotted residential community brings considered planning, open green spaces and shared places together — so you can shape a home that feels like your own.</p><a className="text-link" href={A + 'olive-residency-brochure.pdf'} target="_blank" rel="noreferrer">Read the project brochure <Arrow /></a></div>
         </div>
         <div className="stats-row">
-          <div className="stat"><strong>5.06</strong><span>ACRES · TOTAL SITE AREA</span></div>
           <div className="stat"><strong>113</strong><span>RESIDENTIAL PLOTS SHOWN</span></div>
           <div className="stat"><strong>15k<span className="stat-unit">+</span></strong><span>SQ. FT. OF GREEN & AMENITY SPACE</span></div>
           <div className="stat"><strong>16</strong><span>COMMUNITY AMENITIES</span></div>

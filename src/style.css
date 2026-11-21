@@ -339,3 +339,6 @@ img{max-width:100%}
 .project-gallery-card figcaption{min-height:58px;padding:14px 16px;gap:12px}
 @media(max-width:900px){.project-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}}
 @media(max-width:650px){.project-gallery-grid{grid-template-columns:minmax(0,1fr);gap:18px}.project-gallery-card img{aspect-ratio:4/3}.project-gallery-card figcaption{min-height:56px;padding:13px 15px}}
+
+.stats-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:650px){.stats-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
